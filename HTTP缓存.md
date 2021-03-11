@@ -1,6 +1,8 @@
 # HTTP缓存
 
-### 相关地址：https://www.jiqizhixin.com/articles/2020-07-24-12
+### 相关地址：
+
+https://www.jiqizhixin.com/articles/2020-07-24-12
 
 浏览器根据请求的url进行缓存处理，浏览器缓存分为**强缓存**和**协商缓存**具体缓存机制见：
 
