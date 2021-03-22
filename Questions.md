@@ -10,9 +10,13 @@
 > 特点：不受同源策略限制，可以访问其他域的资源文件。同步阻塞解释执行，但是可以通过指定`defer`, `async`关键字实现延迟或者异步执行。
 * `defer` 在DOM解析完毕后，`DOMContentLoaded`事件前按照元素顺序执行。
 * `async` 完全异步，执行时机取决于加载完毕的时间。
+4. 动态加载脚本，通过js代码动态生成`<script>`标签加载执行外部代码
+> 特点：实现运行时按需加载。支持代码分割。
 
 ### 2. 解决script执行阻塞页面渲染问题
 
 1. 将`<script>`标签放在`<body>`最后边，也就是全部DOM节点之后执行。
 2. 通过`<script>`指定`defer`属性使代码延后在DOM节点加载渲染后执行。
 3. 通过`window.addEventListener('DOMContentLoaded', callback)`使代码作为`DOMContentLoaded`回调函数执行。
+4. 通过动态加载引入的形式，也就是通过js动态生成`<script>`标签来引入执行外部代码。
+5. 加载与执行分离，通过`<link ref="preload" href="">`方式进行预加载，避免阻塞渲染和`document`的`onload`事件
