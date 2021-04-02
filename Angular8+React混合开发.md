@@ -56,3 +56,14 @@ https://update.angular.io/?l=3&v=8.0-9.0
 ts支持`jsx`需要在`tsconfig.json`中配置`"jsx": "react"`将`jsx`编译输出为`ReactDom.render`。
 
 文件后缀名需要改为`.tsx`
+
+### antd样式引入
+
+在`index.scss`文件中添加`@import '~antd/dist/antd.css';`时`antd`的样式可能会和`material`样式产生冲突，解决方法可以通过`css module`形式
+
+```css
+.react-container {
+    @import '~antd/dist/antd'
+}
+// 不能加.css后缀名，否则会引入为全局样式。原因未知。
+```
