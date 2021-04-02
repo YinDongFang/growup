@@ -29,4 +29,11 @@ https://update.angular.io/?l=3&v=8.0-9.0
 
 升级至`angular9`的过程中会将`typescript`自动升级至`3.8.3`
 
-升级过程中过程后存在其他库兼容问题，暂时放弃。
+```
+    "@angular/cdk": "8.2.3",
+    "@angular/material": "8.2.3",
+    "@angular/flex-layout": "8.0.0-beta.27",
+    "@angular/http": "7.2.15",
+    // 这些包不会通过ng update自动更新，需要手动更新
+```
+
