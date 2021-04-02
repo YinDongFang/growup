@@ -37,3 +37,22 @@ https://update.angular.io/?l=3&v=8.0-9.0
     // 这些包不会通过ng update自动更新，需要手动更新
 ```
 
+通过`ng update @angular/material@9 @angular/flex-layout@9.0.0-beta.31 --force`升级`material`依赖
+
+更新后运行`npm run start`可以编译打开项目，但是项目报错：
+
+![image](https://user-images.githubusercontent.com/16241981/113394461-e0da1e80-93ca-11eb-9e97-8247a4a0ad30.png)
+
+执行`ng add @angular/localize`
+
+## 接入react, antd
+
+目前`typescript`版本为`3.8.3`，支持`antd@3`，所以安装时安装`antd@3`
+
+`npm install react react-dom antd@3 @types/react @types/react-dom`
+
+### jsx支持
+
+ts支持`jsx`需要在`tsconfig.json`中配置`"jsx": "react"`将`jsx`编译输出为`ReactDom.render`。
+
+文件后缀名需要改为`.tsx`
